@@ -105,8 +105,8 @@ def get_road_congestion(OD_mx,graph):
     for u, v, d in graph.edges(data=True):
         d['congestion'] = 0.0
         
-    for i in range(len(n)):
-        for j in range(len(n)):
+    for i in range(len(graph.nodes)):
+        for j in range(len(graph.nodes)):
             if  i  in path and j in path[i]:
                 p = path[i][j]
                 for k in range(len(p)-1):
