@@ -134,7 +134,7 @@ def visualize_congestion(graph,scale_factor=250,label='traffic congestion'):
     ax.set_ylim(ymin - y_margin, ymax + y_margin)
 
     # Add a basemap using contextily (less textured for clarity)
-    ctx.add_basemap(ax, source=ctx.providers.OpenStreetMap.Mapnik, crs=edges_proj.crs, alpha=0.7)
+    ctx.add_basemap(ax, source=ctx.providers.CartoDB.Positron, crs=edges_proj.crs, alpha=0.7)
 
     # Plot the edges with line widths scaled by the 'business' attribute
     edges_proj.plot(ax=ax, color="blue", 
